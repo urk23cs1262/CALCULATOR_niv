@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="cal.png">
+</head>
+<body>
+
+  <div class="calculator-container">
+    <div class="calculator">
+      <div id="display" class="display">0</div>
+      <div class="button-grid">
+        <button class="button" onclick="clearEntry()">CE</button>
+        <button class="button" onclick="clearAll()">C</button>
+        <button class="button" onclick="backspace()">⌫</button>
+        <button class="button" onclick="appendOperator('/')">÷</button>
+
+        <button class="button special-op" onclick="reciprocal()">1/x</button>
+        <button class="button special-op" onclick="square()">x²</button>
+        <button class="button special-op" onclick="sqrt()">√x</button>
+        <button class="button" onclick="appendOperator('*')">×</button>
+
+        <button class="button" onclick="appendNumber(7)">7</button>
+        <button class="button" onclick="appendNumber(8)">8</button>
+        <button class="button" onclick="appendNumber(9)">9</button>
+        <button class="button" onclick="appendOperator('-')">-</button>
+
+        <button class="button" onclick="appendNumber(4)">4</button>
+        <button class="button" onclick="appendNumber(5)">5</button>
+        <button class="button" onclick="appendNumber(6)">6</button>
+        <button class="button" onclick="appendOperator('+')">+</button>
+
+        <button class="button" onclick="appendNumber(1)">1</button>
+        <button class="button" onclick="appendNumber(2)">2</button>
+        <button class="button" onclick="appendNumber(3)">3</button>
+        <button class="button equal" onclick="calculate()">=</button>
+
+        <button class="button" onclick="appendNumber(0)">0</button>
+        <button class="button" onclick="appendDot()">.</button>
+      </div>
+    </div>
+
+    <div class="history-panel">
+      <h3>History</h3>
+      <div class="history" id="history">
+        <p id="empty-history">There's no history yet.</p>
+      </div>
+      <button class="clear-history" onclick="clearHistory()">🗑</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
